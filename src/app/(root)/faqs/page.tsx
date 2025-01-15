@@ -1,7 +1,7 @@
 export default function FAQsPage() {
   return (
-    <main className="min-h-screen">
-      <div className="container mx-auto px-4 py-16">
+    <main className="min-h-screen mx-auto w-full max-w-screen-xl">
+        <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold mb-6">Frequently Asked Questions</h1>
         <div className="space-y-6">
           <div className="border-b pb-4">
