@@ -1,3 +1,4 @@
+import { CardHeader } from "@/components/ui/card";
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 
@@ -11,6 +12,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        customBg: '#969AB8',
+        CardHeader:'#555555',
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
