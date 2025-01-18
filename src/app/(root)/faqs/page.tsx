@@ -45,49 +45,58 @@ const FAQs = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto mt-10 sm:mt-20 lg:mt-32 p-6 flex flex-col lg:flex-row">
-      {/* SVG Section */}
-      <div className="hidden lg:block lg:w-1/3">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: "url('/undraw_questions_g2px.svg')", // Replace with the actual SVG path
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "left center",
-          }}
-        ></div>
+    <div className="max-w-6xl mx-auto mt-10 sm:mt-20 lg:mt-32 p-6 flex flex-col gap-12">
+      {/* FAQ and SVG Section */}
+      <div className="flex flex-col lg:flex-row gap-6">
+        {/* SVG Section */}
+        <div className="lg:w-1/3">
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundImage: "url('/undraw_questions_g2px.svg')", // Replace with your SVG path
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+              height: "100%",
+            }}
+          ></div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="lg:w-2/3">
+          <h1 className="text-4xl font-bold mb-8 text-center lg:text-left">
+            Most Frequently Asked FAQ's
+          </h1>
+          {faqs.map((faq, index) => (
+            <div key={index} className="mb-4">
+              <button
+                className="w-full text-left p-4 bg-gray-200 rounded-md"
+                onClick={() => toggleFAQ(index)}
+              >
+                {faq.question}
+              </button>
+              {openIndex === index && (
+                <div className="p-4 bg-gray-100 rounded-md mt-2">
+                  {faq.answer}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* FAQ Section */}
-      <div className="lg:w-2/3">
-        <h1 className="text-4xl px-8 font-bold mb-8 text-center lg:text-left">
-          Most Frequently Asked FAQ's
-        </h1>
-        {faqs.map((faq, index) => (
-          <div key={index} className="mb-2">
-            <button
-              className="w-full text-left p-4 bg-gray-200 rounded-md"
-              onClick={() => toggleFAQ(index)}
-            >
-              {faq.question}
-            </button>
-            {openIndex === index && (
-              <div className="p-4 bg-gray-100 rounded-md">{faq.answer}</div>
-            )}
-          </div>
-        ))}
-
-        <Card className="mt-14 bg-opacity-90">
+      {/* Card Section */}
+      <div className="flex flex-col items-center">
+        <Card className="w-full bg-opacity-90">
           <CardHeader>
-            <CardTitle className="text-4xl text-center lg:text-left">
+            <CardTitle className="text-4xl text-center">
               Still have questions or want to know more?
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="text-center">
             We use only the highest quality parts and offer a wide range of repair services, from simple screen replacements to complex motherboard repairs. We also offer same-day repairs in most cases!
           </CardContent>
-          <CardFooter className="flex justify-center lg:justify-start">
+          <CardFooter className="flex justify-center">
             <Button className="block bg-emerald-500 text-white px-16 py-2 hover:bg-emerald-600 transition-colors text-center rounded-2xl">
               Contact Us
             </Button>
