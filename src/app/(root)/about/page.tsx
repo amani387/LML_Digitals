@@ -13,16 +13,23 @@ const AboutPage = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 p-4 sm:p-6 mt-10 sm:mt-20 lg:mt-32">
       {/* Title Card */}
-      <Card className="bg-white border-none col-span-1 sm:col-span-2">
+      <Card className="bg-white border-none col-span-1 sm:col-span-2"   style={{
+      
+      backgroundImage: "url('/undraw_testimonials_4c7y.svg')",
+      backgroundSize:"contain",
+      backgroundRepeat: "no-repeat",
+      backgroundPosition: "center",
+      alignSelf:"initial"
+    }}>
         <CardHeader>
-          <CardTitle className="text-center font-bold text-2xl sm:text-3xl lg:text-[40px] tracking-wide">
+          <CardTitle className="text-right font-bold text-2xl sm:text-3xl lg:text-[40px] tracking-wide">
             <strong>OUR VALUES</strong>
           </CardTitle>
         </CardHeader>
       </Card>
 
       {/* Individual Value Cards */}
-      <Card className="bg-white shadow-md">
+      <Card className="bg-white shadow-md group hover:shadow-lg hover:border-4 hover:border-green-100 transition-all duration-300 relative overflow-hidden">
         <CardHeader>
           <FontAwesomeIcon icon={faCheckCircle} className="w-6 h-6 text-blue-500 mb-2" />
           <CardTitle className="text-lg font-semibold">Reliability</CardTitle>
@@ -36,9 +43,9 @@ const AboutPage = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-white shadow-md">
+      <Card className="bg-white shadow-md group hover:shadow-lg hover:border-4 hover:border-green-100 transition-all duration-300 relative overflow-hidden">
         <CardHeader>
-          <FontAwesomeIcon icon={faGlobe} className="w-6 h-6 text-green-500 mb-2" />
+          <FontAwesomeIcon icon={faGlobe} className="w-6 h-6 text-emerald-500 mb-2" />
           <CardTitle className="text-lg font-semibold">Online Access</CardTitle>
         </CardHeader>
         <CardContent>
@@ -50,7 +57,7 @@ const AboutPage = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-white shadow-md">
+      <Card className="bg-white shadow-md group hover:shadow-lg hover:border-4 hover:border-green-100 transition-all duration-300 relative overflow-hidden">
         <CardHeader>
           <FontAwesomeIcon icon={faHandshake} className="w-6 h-6 text-yellow-500 mb-2" />
           <CardTitle className="text-lg font-semibold">Professional Partners</CardTitle>
@@ -64,7 +71,7 @@ const AboutPage = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-white shadow-md">
+      <Card className="bg-white shadow-md group hover:shadow-lg hover:border-4 hover:border-green-100 transition-all duration-300 relative overflow-hidden">
         <CardHeader>
           <FontAwesomeIcon icon={faRocket} className="w-6 h-6 text-red-500 mb-2" />
           <CardTitle className="text-lg font-semibold">Fast Service</CardTitle>
@@ -77,7 +84,7 @@ const AboutPage = () => {
         </CardContent>
       </Card>
 
-      <Card className="bg-white shadow-md">
+      <Card className="bg-white shadow-md group hover:shadow-lg hover:border-4 hover:border-green-100 transition-all duration-300 relative overflow-hidden">
         <CardHeader>
           <FontAwesomeIcon icon={faShieldAlt} className="w-6 h-6 text-purple-500 mb-2" />
           <CardTitle className="text-lg font-semibold">Trusted</CardTitle>
