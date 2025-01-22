@@ -36,8 +36,8 @@ const Navbar = () => {
           <Link href="/faqs" className="text-gray-600 hover:text-gray-800">
             FAQs
           </Link>
-          <Link href="/" className="text-gray-600 hover:text-gray-800">
-          
+          <Link href="/services" className="text-gray-600 hover:text-gray-800">
+          SERVICES
           </Link>
           <Link href="/" className="text-gray-600 hover:text-gray-800">
           
@@ -96,6 +96,13 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(false)}
           >
             FAQs
+          </Link>
+          <Link
+            href="/services"
+            className="block text-gray-600 hover:text-gray-800"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+           SERVICES
           </Link>
           <Link
             href="/book-repair"
