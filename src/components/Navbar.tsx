@@ -67,6 +67,13 @@ const Navbar = () => {
             </Link>
           ))}
           <Link
+            href="/services"
+            className="block text-gray-600 hover:text-gray-800"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+           SERVICES
+          </Link>
+          <Link
             href="/book-repair"
             className="bg-[#52ab98] rounded-xl hover:bg-[#00c9a7] text-lg px-10 py-2 h-auto text-cyan-50"
             onClick={() => setIsMobileMenuOpen(false)}
