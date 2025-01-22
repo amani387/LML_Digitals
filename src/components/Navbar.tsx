@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 z-50 w-full px-4 py-4 bg-[#EAEAEA] border-b border-gray-100">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-screen-2xl mx-auto flex items-center justify-between">
         {/* Logo Section */}
         <Link href="/" className="flex  items-center">
           <div className="text-xl font-bold flex items-center gap-1">
@@ -50,7 +50,7 @@ const Navbar = () => {
           </Link>
           <Link
             href="/book-repair"
-            className="block bg-emerald-500 text-white px-4 py-2  rounded-md hover:bg-emerald-600 transition-colors text-center ml-auto"
+            className="bg-[#52ab98] rounded-xl hover:bg-[#00c9a7] text-lg px-8 py-2 h-auto text-cyan-50"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Book a Repair
@@ -99,7 +99,7 @@ const Navbar = () => {
           </Link>
           <Link
             href="/book-repair"
-            className="block bg-emerald-500 text-white px-4 py-2 rounded-md hover:bg-emerald-600 transition-colors text-center"
+            className="bg-[#52ab98] rounded-xl hover:bg-[#00c9a7] text-lg px-10 py-2 h-auto text-cyan-50"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Book a Repair
