@@ -10,7 +10,9 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
+    extend: {  animation: {
+      'spin-slow': 'spin 5s linear infinite',
+    },
       colors: {
         customBg: '#969AB8',
         CardHeader:'#555555',
