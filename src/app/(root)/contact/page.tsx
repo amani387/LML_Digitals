@@ -19,13 +19,14 @@ const ContactPage = () => {
     e.preventDefault();
     console.log({ name, email, message });
   };
-  return (
-    <div className="min-h-screen flex flex-col items-center bg-gray-100 relative mt-20">
+  return (//min-h-screen w-full pt-20 lg:min-h-screen mx-auto max-w-screen-2xl
+    <div className="min-h-screen w-full pt-20 flex  flex-col items-center bg-gray-100 relative mt-20">
+      {/* <div className="min-h-screen w-full pt-20 flex flex-col items-center bg-gray-100 relative mt-20 mx-0"> */}
       {/* Main Content */}
-      <div className="flex flex-wrap w-full max-w-6xl items-center justify-center relative">
+      <div className="flex flex-wrap w-full bg-gray-100 max-w-7xl items-center justify-center relative">
         {/* Left Section: Form */}
         <div className="w-full md:w-1/2 p-8">
-          <div className="bg-gray-100 p-8 rounded-2xl">
+          <div className="bg-gray-100 rounded-2xl">
             <div className="text-left mb-6">
               <h1 className="text-4xl font-bold text-emerald-600">Contact Us</h1>
               <p className="text-gray-700 mt-2 text-lg">
@@ -97,7 +98,7 @@ const ContactPage = () => {
 
  
    {/* Social Media Links */}
-   <div className="absolute bottom-8 right-4   p-4 rounded-l-2xl">
+   <div className="absolute bottom-8 right-0 bg-[#52ab98]   p-5 rounded-l-full">
   <div className="flex flex-col items-center space-y-6">
     <a
       href="#"
@@ -111,21 +112,22 @@ const ContactPage = () => {
       </span>
     </a>
     <a
-      href="#"
-      className="group flex items-center justify-center flex-col text-purple-700 hover:text-purple-900"
-    >
-      <div className="bg-[#52ab98] text-white p-4 rounded-full transform transition-transform duration-300 group-hover:scale-110">
-        <FontAwesomeIcon icon={faInstagram} />
-      </div>
-      <span className="opacity-0 group-hover:opacity-100 text-sm font-semibold mt-2 transition-opacity duration-300">
-        Instagram
-      </span>
-    </a>
+  href="#"
+  className="group flex items-center justify-center flex-col text-purple-700 hover:text-purple-900"
+>
+  <div className="bg-[#52ab98] text-white p-4 rounded-full transform transition-transform duration-300 group-hover:scale-110">
+    <FontAwesomeIcon icon={faInstagram} />
+  </div>
+  <span className="opacity-0 group-hover:opacity-100 text-sm font-semibold mt-2 transition-opacity duration-300">
+    Instagram
+  </span>
+</a>
+
     <a
       href="#"
       className="group flex items-center justify-center flex-col text-purple-700 hover:text-purple-900"
     >
-      <div className="bg-[#52ab98] text-white p-4 rounded-full transform transition-transform duration-300 group-hover:scale-110">
+      <div className="bg-[#52ab98] text-white p-3 rounded-full transform transition-transform duration-300 group-hover:scale-110">
         <FontAwesomeIcon icon={faLinkedinIn} />
       </div>
       <span className="opacity-0 group-hover:opacity-100 text-sm font-semibold mt-2 transition-opacity duration-300">
