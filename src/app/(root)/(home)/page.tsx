@@ -11,7 +11,7 @@ export default function Page() {
      
       <Header/>
       {/* Features Section */}
-      <section className="w-full max-w-[95%] md:max-w-[90%] mx-auto px-4 py-8">
+      <section className="w-full max-w-[95%] md:max-w-[90%] mx-auto px-0 py-0 md:px-4 md:py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-11">
           {features.map((feature) => (
             <Card key={feature.title} className="bg-white rounded-3xl shadow-sm border-none">
