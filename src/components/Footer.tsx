@@ -4,8 +4,8 @@ import { DevicePhoneMobileIcon } from '@heroicons/react/24/outline';
 const Footer: React.FC = () => {
 
   return (
-    <footer className="bg-[#1a2b34] text-white py-8">
-      <div className="container mx-auto px-4">
+    <footer className="bg-[#1a2b34] text-white py-8 ">
+      <div className="container mx-auto px-4 max-w-[1440px]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Popular Brands */}
           <div>
