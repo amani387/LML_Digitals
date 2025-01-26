@@ -7,7 +7,7 @@ export default function Header() {
     <section className="w-full max-w-[95%] md:max-w-[90%] mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row gap-8 bg-white rounded-xl shadow-sm">
           <div className="flex-1 flex flex-col justify-between space-y-6 p-4 md:p-16 ">
-            <h1 className=" text-xl font-bold text-teal-800 md:text-3xl">
+            <h1 className="px-2 text-xl font-bold text-teal-800 md:text-5xl md:px-12 ">
               {heroSection.title}
               <p className="text-gray-400 text-sm">
                 {heroSection.subtitle}
@@ -24,6 +24,8 @@ export default function Header() {
               width={400}
               height={300}
               className="w-full rounded-s-none rounded-e-xl"
+              priority
+              loading="eager"
             />
           </div>
         </div>
