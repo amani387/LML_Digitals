@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react'; // Icons for menu toggle
 import { navbar } from '@/constants/nav';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,14 +14,20 @@ const Navbar = () => {
     <nav className="fixed top-0 z-50 w-full px-4 py-4 bg-[#EAEAEA] border-b border-gray-100">
       <div className="max-w-screen-2xl mx-auto flex items-center justify-between">
         {/* Logo Section */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-2">
           <div className="text-xl font-bold flex items-center gap-1">
             <div className="flex gap-0.5">
               <div className="w-1 h-5 bg-red-500"></div>
               <div className="w-1 h-5 bg-red-300"></div>
               <div className="w-1 h-5 bg-red-100"></div>
             </div>
-            <span>SiteLogo</span>
+            <span>  <Image
+            src="/logo.png"
+            alt="Brand Logo"
+            width={50}
+            height={50}
+            className="object-contain"
+          /></span>
           </div>
         </Link>
 
