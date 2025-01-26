@@ -6,7 +6,7 @@ import { values } from "@/constants/about";
 const AboutPage = () => {
   return (
     <main className="min-h-screen w-full pt-28 lg:min-h-screen mx-auto max-w-[1440px]">
-      <section className="w-full max-w-[95%] md:max-w-[90%] mx-auto px-4 py-8">
+      <section className="w-full max-w-[95%] md:max-w-[90%] mx-auto px-0 py-0 md:px-4 md:py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <Card className="shadow-none border-none col-span-1 md:col-span-1 h-20 hover:cursor-pointer">
         <CardHeader className="pb-2 px-2">
