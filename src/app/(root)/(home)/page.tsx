@@ -6,7 +6,7 @@ import {features, services, ctaSection } from "@/constants/home"
 
 export default function Page() {
   return (
-    <main className="min-h-screen w-full pt-20  lg:min-h-screen mx-auto max-w-screen-2xl">
+    <main className="min-h-screen w-full pt-28  lg:min-h-screen mx-auto max-w-[1440px]">
       {/* Hero Section */}
      
       <Header/>
