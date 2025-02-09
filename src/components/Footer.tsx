@@ -1,5 +1,7 @@
 import React from 'react';
 import { popularMobiles, popularBrands } from "@/constants/footer"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { DevicePhoneMobileIcon } from '@heroicons/react/24/outline';
 const Footer: React.FC = () => {
 
@@ -40,7 +42,7 @@ const Footer: React.FC = () => {
               <a href="#" className="text-white hover:underline">Contact Us</a>
             </div>
 
-            <div>
+            {/* <div>
               <h3 className="text-lg mb-2">Subscribe to our newsletter</h3>
               <div className="flex">
                 <input
@@ -53,7 +55,7 @@ const Footer: React.FC = () => {
                 </button>
               </div>
             </div>
-
+ */}
             <div className="mt-6">
               <h3 className="text-lg mb-2">Follow Us</h3>
               <div className="flex space-x-4">
