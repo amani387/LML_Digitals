@@ -3,12 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from "next/image"
 import Header from "@/components/Header"
 import {features, services, ctaSection } from "@/constants/home"
+import Testimonial from "@/components/Testimonial"
 
 export default function Page() {
   return (
-    <main className="min-h-screen w-full pt-28  lg:min-h-screen mx-auto max-w-[1440px]">
+    <main className="min-h-screen lg:min-h-screen ">
       {/* Hero Section */}
-     
+     <section className="w-full pt-28   mx-auto max-w-[1440px]">
       <Header/>
       {/* Features Section */}
       <section className="w-full max-w-[95%] md:max-w-[90%] mx-auto px-0 py-0 md:px-4 md:py-8">
@@ -64,6 +65,10 @@ export default function Page() {
             <Button className="bg-[#52ab98] rounded-3xl hover:bg-[#00c9a7] text-cyan-50 px-10 py-2 h-auto" size="lg">{ctaSection.buttonText}</Button>
           </CardContent>
         </Card>
+      </section>
+      </section>
+      <section className="max-w-[95%] mx-auto">
+        <Testimonial/>
       </section>
     </main>
   )
