@@ -1,6 +1,6 @@
-import { CardHeader } from "@/components/ui/card";
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
+import tailwindScrollbarHide from "tailwind-scrollbar-hide";
 
 export default {
   darkMode: ["class"],
@@ -10,12 +10,13 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {  animation: {
-      'spin-slow': 'spin 5s linear infinite',
-    },
+    extend: {
+      animation: {
+        "spin-slow": "spin 5s linear infinite",
+      },
       colors: {
-        customBg: '#969AB8',
-        CardHeader:'#555555',
+        customBg: "#969AB8",
+        CardHeader: "#555555",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -68,5 +69,5 @@ export default {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate, tailwindScrollbarHide],
 } satisfies Config;
