@@ -61,7 +61,7 @@ const ContactPage = () => {
       <div className="flex flex-wrap w-full max-w-6xl items-center justify-center relative">
         {/* Left Section: Form */}
         <div className="w-full md:w-1/2 p-8">
-          <div className="bg-gray-100 p-8 rounded-2xl">
+          <div className="bg-gray-100 rounded-2xl">
             <div className="text-left mb-6">
               <h1 className="text-4xl font-bold text-emerald-600">Contact Us</h1>
               <p className="text-gray-700 mt-2 text-lg">
@@ -172,6 +172,59 @@ const ContactPage = () => {
           ))}
         </div>
       </div>
+
+ 
+   {/* Social Media Links */}
+   <div className="absolute bottom-8 right-0 bg-[#52ab98]   p-5 rounded-l-full">
+  <div className="flex flex-col items-center space-y-6">
+    <a
+      href="#"
+      className="group flex items-center justify-center flex-col text-purple-700 hover:text-purple-900"
+    >
+      <div className="bg-[#52ab98] text-white p-4 rounded-full transform transition-transform duration-300 group-hover:scale-110">
+        <FontAwesomeIcon icon={faFacebookF} />
+      </div>
+      <span className="opacity-0 group-hover:opacity-100 text-sm font-semibold mt-2 transition-opacity duration-300">
+        Facebook
+      </span>
+    </a>
+    <a
+  href="#"
+  className="group flex items-center justify-center flex-col text-purple-700 hover:text-purple-900"
+>
+  <div className="bg-[#52ab98] text-white p-4 rounded-full transform transition-transform duration-300 group-hover:scale-110">
+    <FontAwesomeIcon icon={faInstagram} />
+  </div>
+  <span className="opacity-0 group-hover:opacity-100 text-sm font-semibold mt-2 transition-opacity duration-300">
+    Instagram
+  </span>
+</a>
+
+    <a
+      href="#"
+      className="group flex items-center justify-center flex-col text-purple-700 hover:text-purple-900"
+    >
+      <div className="bg-[#52ab98] text-white p-3 rounded-full transform transition-transform duration-300 group-hover:scale-110">
+        <FontAwesomeIcon icon={faLinkedinIn} />
+      </div>
+      <span className="opacity-0 group-hover:opacity-100 text-sm font-semibold mt-2 transition-opacity duration-300">
+        LinkedIn
+      </span>
+    </a>
+    <a
+      href="#"
+      className="group flex items-center justify-center flex-col text-purple-700 hover:text-purple-900"
+    >
+      <div className="bg-[#52ab98] text-white p-4 rounded-full transform transition-transform duration-300 group-hover:scale-110">
+        <FontAwesomeIcon icon={faTwitter} />
+      </div>
+      <span className="opacity-0 group-hover:opacity-100 text-sm font-semibold mt-2 transition-opacity duration-300">
+        Twitter
+      </span>
+    </a>
+  </div>
+</div>
+
     </div>
   );
 };
