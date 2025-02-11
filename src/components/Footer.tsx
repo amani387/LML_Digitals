@@ -1,7 +1,7 @@
 import React from 'react';
 import { popularMobiles, popularBrands } from "@/constants/footer"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitter, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { DevicePhoneMobileIcon } from '@heroicons/react/24/outline';
 const Footer: React.FC = () => {
 
@@ -56,19 +56,10 @@ const Footer: React.FC = () => {
               </div>
             </div>
  */}
-            <div className="mt-6">
-              <h3 className="text-lg mb-2">Follow Us</h3>
-              <div className="flex space-x-4">
-                <a href="#" className="text-white hover:text-gray-300">
-                  <i className="fab fa-facebook"></i>
-                </a>
-                <a href="#" className="text-white hover:text-gray-300">
-                  <i className="fab fa-instagram"></i>
-                </a>
-                <a href="#" className="text-white hover:text-gray-300">
-                  <i className="fab fa-twitter"></i>
-                </a>
-              </div>
+            <div className='flex gap-2 text-xs'>
+              <FontAwesomeIcon icon={faTwitter} className="text-white text-sm h-5 w-8" />
+              <FontAwesomeIcon icon={faFacebook} className="text-white h-5 w-8" />
+              <FontAwesomeIcon icon={faInstagram} className="text-white h-5 w-8" />
             </div>
           </div>
         </div>
