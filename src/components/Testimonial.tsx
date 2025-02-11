@@ -14,8 +14,11 @@ export default function Testimonial() {
   const [isHovered1, setIsHovered1] = useState(false)
   const [isHovered2, setIsHovered2] = useState(false)
   const [isHovered3, setIsHovered3] = useState(false)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrollAmount1, setScrollAmount1] = useState(0)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrollAmount2, setScrollAmount2] = useState(0)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [scrollAmount3, setScrollAmount3] = useState(0)
   const [activeIndex, setActiveIndex] = useState(0)
 
@@ -34,7 +37,7 @@ export default function Testimonial() {
           return newScrollAmount >= carousel1.scrollHeight - carousel1.clientHeight ? 0 : newScrollAmount
         })
       }
-    }, 30)
+    }, 50)
 
     const scrollInterval2 = setInterval(() => {
       if (!isHovered2 && carousel2) {
@@ -44,7 +47,7 @@ export default function Testimonial() {
           return newScrollAmount <= 0 ? carousel2.scrollHeight - carousel2.clientHeight : newScrollAmount
         })
       }
-    }, 30)
+    }, 50)
 
     const scrollInterval3 = setInterval(() => {
       if (!isHovered3 && carousel3) {
@@ -54,7 +57,7 @@ export default function Testimonial() {
           return newScrollAmount >= carousel3.scrollHeight - carousel3.clientHeight ? 0 : newScrollAmount
         })
       }
-    }, 30)
+    }, 50)
 
     const scrollInterval4 = setInterval(() => {
       if (carousel4) {
@@ -64,7 +67,7 @@ export default function Testimonial() {
           return newScrollAmount <= 0 ? carousel4.scrollHeight - carousel4.clientHeight : newScrollAmount
         })
       }
-    }, 30)
+    }, 50)
 
     const scrollInterval5 = setInterval(() => {
       if (carousel5) {
@@ -74,7 +77,7 @@ export default function Testimonial() {
           return newScrollAmount <= 0 ? carousel5.scrollHeight - carousel5.clientHeight : newScrollAmount
         })
       }
-    }, 30)
+    }, 50)
 
     return () => {
       clearInterval(scrollInterval1)
@@ -91,7 +94,7 @@ export default function Testimonial() {
 
   return (
     <section className="w-full max-w-[1920px] mx-auto md:px-4 py-8">
-      <div className="hidden md:flex flex-col md:flex-row gap-8 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.05),0_2px_4px_-2px_rgba(0,0,0,0.05),0_0_40px_10px_rgba(0,0,0,0.02)] overflow-hidden relative transform-gpu">
+      <div className="hidden md:flex flex-col border-none shadow-none md:flex-row gap-8 overflow-hidden relative transform-gpu">
         <div className="absolute top-0 left-0 w-full h-72 bg-gradient-to-b from-[#f2f3f3] to-transparent z-[1] pointer-events-none"></div>
         
         {/* Left Gradient Overlay */}
