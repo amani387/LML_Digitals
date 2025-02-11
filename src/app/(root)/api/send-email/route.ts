@@ -58,12 +58,22 @@ export async function POST(req: Request) {
     // Send email
     await sgMail.send(msg);
     return NextResponse.json({ success: true }, { status: 200 });
-  } catch (error: any) {
-    console.error("SendGrid error:", error.response?.body || error.message);
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      const sgError = error as sgMail.ResponseError;
+      console.error(
+        "SendGrid error:",
+        sgError.response?.body || sgError.message
+      );
+    } else {
+      console.error("SendGrid error:", error);
+    }
     return NextResponse.json(
       {
         error: "Failed to send email",
-        details: error.response?.body || error.message,
+        details:
+          (error as sgMail.ResponseError).response?.body ||
+          (error as Error).message,
       },
       { status: 500 }
     );
