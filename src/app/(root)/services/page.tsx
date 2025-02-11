@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef } from "react";
 import { Button } from "@/components/ui/button"; // shadcn button
 import { cn } from "@/lib/utils"; // shadcn utility for classnames
+import Image from "next/image";
 
 // Dummy Services Data
 const services = [
@@ -60,9 +60,11 @@ const ServicePage = () => {
                 "group border rounded-lg p-6 shadow-lg bg-white transform hover:scale-102 hover:shadow-xl transition-transform duration-200 ease-in-out"
               )}
             >
-              <img
+              <Image
                 src={service.image}
                 alt={service.name}
+                width={300}
+                height={200}
                 className="w-full h-32 object-cover rounded-md mb-4 transition-transform duration-200 group-hover:scale-105"
               />
               <h2 className="text-lg font-semibold text-gray-800 group-hover:text-indigo-500 transition-colors duration-200">
@@ -72,7 +74,7 @@ const ServicePage = () => {
                 {service.description}
               </p>
               <Button
-                variant="primary"
+                variant="default"
                 className="mt-4 bg-[#52ab98] hover:bg-[#00c9a7] text-white shadow-sm hover:shadow-md transition-shadow duration-200"
               >
                 Book Now
